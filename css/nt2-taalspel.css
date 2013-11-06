@@ -14,14 +14,33 @@
 }
     
 .next-button {
-    margin-top: 10px;
+    margin-top: 20px;
 }
 
 .ui-block-a {
     width: 60px;
     height: 60px;
     position: relative;
-    margin: 0 auto 30px;
+    -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+            -o-perspective: 1000px;
+                perspective: 1000px;
+}
+
+.ui-block-b {
+    width: 60px;
+    height: 60px;
+    position: relative;
+    -webkit-perspective: 1000px;
+        -moz-perspective: 1000px;
+            -o-perspective: 1000px;
+                perspective: 1000px;
+}
+
+.ui-block-c {
+    width: 60px;
+    height: 60px;
+    position: relative;
     -webkit-perspective: 1000px;
         -moz-perspective: 1000px;
             -o-perspective: 1000px;
