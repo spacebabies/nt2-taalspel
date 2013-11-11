@@ -25,6 +25,61 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
             $(this).removeClass(currentOption).addClass(randomOption);
         });
     });
+// Dit deel gaat over het menudeel Gevorderden > Conjuncties.
+    $(document).on('click', '#conjuncties-click',function(e) {
+        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+        var randomDobbel_1 = basisImgs[Math.floor(Math.random()*basisImgs.length)];
+        var randomDobbel_2 = extraImgs[Math.floor(Math.random()*extraImgs.length)];
+
+        $('#kaart-tekst-conjuncties').text(randomWord);
+        $('#dobbel-basis').attr('src', randomDobbel_1);
+        $('#dobbel-extra').attr('src', randomDobbel_2);
+    });
+
+    $(document).on('click', '#conjuncties-new-click',function(e) {
+        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+
+        $('#kaart-tekst-conjuncties').text(randomWord);
+    });
+
+    $(document).on('click', '#conjuncties-roll-click',function(e) {
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
+        var randomDobbel_1 = basisImgs[Math.floor(Math.random()*basisImgs.length)];
+        var randomDobbel_2 = extraImgs[Math.floor(Math.random()*extraImgs.length)];
+
+        $('#dobbel-basis').attr('src', randomDobbel_1);
+        $('#dobbel-extra').attr('src', randomDobbel_2);
+    });
+
+// Dit deel gaat over het menudeel Gevorderden > Separabele werkwoorden.
+    $(document).on('click', '#separables-click',function(e) {
+        var words = ['uitleggen', 'voorbereiden', 'kennismaken', 'schoonmaken', 'opzoeken']
+        var modeImgs = ['img/PV.png', 'img/INF.png', 'img/PAR.png']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+        var randomDobbel = modeImgs[Math.floor(Math.random()*modeImgs.length)];
+
+        $('#kaart-tekst-separables').text(randomWord);
+        $('#dobbel-separables').attr('src', randomDobbel);
+    });
+
+    $(document).on('click', '#separables-new-click',function(e) {
+        var words = ['uitleggen', 'voorbereiden', 'kennismaken', 'schoonmaken', 'opzoeken']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+
+        $('#kaart-tekst-separables').text(randomWord);
+    });
+
+    $(document).on('click', '#separables-roll-click',function(e) {
+        var modeImgs = ['img/PV.png', 'img/INF.png', 'img/PAR.png']
+        var randomDobbel = modeImgs[Math.floor(Math.random()*modeImgs.length)];
+
+        $('#dobbel-separables').attr('src', randomDobbel);
+    });
 
 
 // Dit deel gaat over het menudeel Thema's > Seizoenen..
