@@ -61,7 +61,7 @@
                   NT2-Taalspel
               </li>
               <li data-theme="c">
-                  <a id="eenvoudig-click" href="#page3" data-transition="slide">
+                  <a href="#page12" data-transition="slide">
                       Eenvoudige zinnen
                   </a>
               </li>
@@ -88,7 +88,63 @@
           </div>
       </div>
   </div>
-  <div data-role="page" data-control-title="Eenvoudige zinnen" id="page3">
+  <div data-role="page" data-control-title="Eenvoudige zinnen" data-theme="b"
+  id="page12">
+      <div data-role="panel" id="panel12" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+              <li data-theme="a">
+                  <a href="" data-transition="slide">
+                      Button
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel12" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Eenvoudige zinnen
+          </h3>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="d" data-inset="true">
+              <li data-role="list-divider" role="heading">
+                  Kies een onderwerp:
+              </li>
+              <li data-theme="c">
+                  <a id="eenvoudig-click" href="#page3" data-transition="slide">
+                      Eenvoudige werkwoorden
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="conjuncties-click" href="#page13" data-transition="slide">
+                      Basis conjuncties
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Eenvoudige werkwoorden" id="page3">
       <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
       data-theme="a">
           <ul data-role="listview" data-divider-theme="h" data-inset="false">
@@ -136,13 +192,69 @@
               </p>
           </div>
           <a id="eenvoudig-new-click" data-role="button" href="#page3" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
           <ul>
               <li>
-                  <a href="#page1" data-transition="fade" data-theme="" data-icon="star">
+                  <a href="#page12" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Basis conjuncties" id="page13">
+      <div data-role="panel" id="panel13" data-position="left" data-display="reveal"
+      data-theme="a">
+          <ul data-role="listview" data-divider-theme="h" data-inset="false">
+              <li data-role="list-divider" role="heading">
+                  Uitleg
+              </li>
+              <li data-role="list-divider" role="heading">
+                  Divider
+              </li>
+          </ul>
+      </div>
+      <div data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel13" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h2>
+              Basis conjuncties
+          </h2>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-basis" style="width: 60px; height: 59px" src="img/Omdat.png">
+                  </div>
+              </div>
+          </div>
+          <a id="eenvoudig-roll-click" data-role="button" data-theme="a" href="#page3">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="card">
+              <p id="kaart-tekst-ev">
+                  maken
+              </p>
+          </div>
+          <a id="eenvoudig-new-click" data-role="button" href="#page3" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a href="#page12" data-transition="fade" data-theme="" data-icon="star">
                       Terug
                   </a>
               </li>
@@ -330,7 +442,7 @@
               </p>
           </div>
           <a id="ww-new-click" data-role="button" href="#page6" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -393,7 +505,7 @@
               </p>
           </div>
           <a id="conjuncties-new-click" data-role="button" href="#page7" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -451,7 +563,7 @@
               </p>
           </div>
           <a id="separables-new-click" data-role="button" href="#page8" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -528,7 +640,7 @@
               </p>
           </div>
           <a data-role="button" href="#page9" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -596,7 +708,7 @@
               </p>
           </div>
           <a id="season-new-click" data-role="button" href="#page10" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
@@ -654,7 +766,7 @@
               </p>
           </div>
           <a id="science-new-click" data-role="button" href="#page11" class="next-button">
-              Opnieuw
+              Nieuw werkwoord
           </a>
       </div>
       <div data-role="tabbar" data-iconpos="top" data-theme="a">
