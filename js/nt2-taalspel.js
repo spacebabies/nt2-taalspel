@@ -1,5 +1,5 @@
 $(document).on('pagebeforeshow','#page1' ,function(e,data){
-//Dit deel geldt voor het deel Eenvoudige zinnen van het menu.
+//Dit deel geldt voor het deel Eenvoudig > Werkwoorden van het menu.
    $(document).on('click', '#eenvoudig-click',function(e) {
         var words = ['hebben', 'zijn', 'gaan', 'doen', 'luisteren', 'wonen', 'herhalen','maken']
         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
@@ -36,18 +36,40 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#dobbel-3-ev').attr('src', randomDobbel_3);
     });
 
+// Dit deel gaat over het menudeel Eenvoudig > Conjuncties.
+    $(document).on('click', '#basis-click',function(e) {
+        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+        var randomDobbel = basisImgs[Math.floor(Math.random()*basisImgs.length)];
+
+        $('#kaart-tekst-basis').text(randomWord);
+        $('#dobbel-basis').attr('src', randomDobbel);
+    });
+
+    $(document).on('click', '#basis-new-click',function(e) {
+        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+        var randomWord = words[Math.floor(Math.random()*words.length)];
+
+        $('#kaart-tekst-basis').text(randomWord);
+    });
+
+    $(document).on('click', '#basis-roll-click',function(e) {
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var randomDobbel = basisImgs[Math.floor(Math.random()*basisImgs.length)];
+
+        $('#dobbel-basis').attr('src', randomDobbel);
+    });
+
 // Dit deel gaat over het menudeel Gevorderden > Conjuncties.
     $(document).on('click', '#conjuncties-click',function(e) {
         var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
-        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
         var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
-        var randomDobbel_1 = basisImgs[Math.floor(Math.random()*basisImgs.length)];
-        var randomDobbel_2 = extraImgs[Math.floor(Math.random()*extraImgs.length)];
+        var randomDobbel = extraImgs[Math.floor(Math.random()*extraImgs.length)];
 
         $('#kaart-tekst-conjuncties').text(randomWord);
-        $('#dobbel-basis').attr('src', randomDobbel_1);
-        $('#dobbel-extra').attr('src', randomDobbel_2);
+        $('#dobbel-extra').attr('src', randomDobbel);
     });
 
     $(document).on('click', '#conjuncties-new-click',function(e) {
@@ -58,13 +80,10 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#conjuncties-roll-click',function(e) {
-        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
         var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
-        var randomDobbel_1 = basisImgs[Math.floor(Math.random()*basisImgs.length)];
-        var randomDobbel_2 = extraImgs[Math.floor(Math.random()*extraImgs.length)];
+        var randomDobbel = extraImgs[Math.floor(Math.random()*extraImgs.length)];
 
-        $('#dobbel-basis').attr('src', randomDobbel_1);
-        $('#dobbel-extra').attr('src', randomDobbel_2);
+        $('#dobbel-extra').attr('src', randomDobbel);
     });
 
 // Dit deel gaat over het menudeel Gevorderden > Separabele werkwoorden.
