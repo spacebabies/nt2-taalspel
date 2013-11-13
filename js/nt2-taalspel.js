@@ -38,6 +38,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 
 // Dit deel gaat over het menudeel Eenvoudig > Conjuncties.
     $(document).on('click', '#basis-click',function(e) {
+        var classState = $('#kaart-basis').attr('class')
+        $('#kaart-basis').removeClass(classState).addClass('on-card');
+
         var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
         var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
@@ -48,10 +51,18 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#basis-new-click',function(e) {
-        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
-        var randomWord = words[Math.floor(Math.random()*words.length)];
-
-        $('#kaart-tekst-basis').text(randomWord);
+        var classState = $('#kaart-basis').attr('class')
+        if (classState == 'on-card') {
+            var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+            var randomWord = words[Math.floor(Math.random()*words.length)];
+            $('#kaart-tekst-basis').text(randomWord);
+        }
+        else {
+            $('#kaart-basis').removeClass('off-card').addClass('on-card');
+            var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+            var randomWord = words[Math.floor(Math.random()*words.length)];
+            $('#kaart-tekst-basis').text(randomWord);
+        }
     });
 
     $(document).on('click', '#basis-roll-click',function(e) {
@@ -59,6 +70,16 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         var randomDobbel = basisImgs[Math.floor(Math.random()*basisImgs.length)];
 
         $('#dobbel-basis').attr('src', randomDobbel);
+    });
+
+    $(document).on('click', '#basis-card-click',function(e) {
+        var classState = $('#kaart-basis').attr('class')
+        if (classState == 'on-card') {
+            $('#kaart-basis').removeClass('on-card').addClass('off-card');
+        }
+        else {
+            $('#kaart-basis').removeClass('off-card').addClass('on-card');
+        }
     });
 
 // Dit deel gaat over het menudeel Gevorderden > Conjuncties.

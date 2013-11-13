@@ -96,24 +96,7 @@
   </div>
   <div data-role="page" data-control-title="Eenvoudig" data-theme="b"
   id="page12">
-      <div data-role="panel" id="panel12" data-position="left" data-display="reveal"
-      data-theme="a">
-          <ul data-role="listview" data-divider-theme="h" data-inset="false">
-              <li data-role="list-divider" role="heading">
-                  Divider
-              </li>
-              <li data-theme="a">
-                  <a href="" data-transition="slide">
-                      Button
-                  </a>
-              </li>
-          </ul>
-      </div>
       <div class="header" data-theme="a" data-role="header">
-          <a data-controltype="panelbutton" data-role="button" href="#panel12" data-icon="bars"
-          data-iconpos="left" class="ui-btn-left">
-              Uitleg
-          </a>
           <h3>
               Eenvoudig
           </h3>
@@ -212,7 +195,7 @@
           <a id="eenvoudig-roll-click" data-role="button" data-theme="a" href="#page3">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-ev">
                   hebben
               </p>
@@ -287,11 +270,13 @@
           <a id="basis-roll-click" data-role="button" data-theme="a" href="#page13">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
-              <p id="kaart-tekst-basis">
-                  maken
-              </p>
-          </div>
+          <a id="basis-card-click" href="#page13">
+            <div id="kaart-basis" data-controltype="htmlblock" class="on-card">
+                <p id="kaart-tekst-basis">
+                    maken
+                </p>
+            </div>
+          <a>
           <a id="basis-new-click" data-role="button" href="#page13" class="next-button">
               Nieuw werkwoord
           </a>
@@ -496,7 +481,7 @@
           <a id="ww-roll-click" data-role="button" data-theme="a" href="#page6">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-ww">
                   streven
               </p>
@@ -571,7 +556,7 @@
           <a id="conjuncties-roll-click" data-role="button" data-theme="a" href="#page7">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-conjuncties">
                   vergeten
               </p>
@@ -645,7 +630,7 @@
           <a id="separables-roll-click" data-role="button" data-theme="a" href="#page8">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-separables">
                   kennismaken
               </p>
@@ -741,7 +726,7 @@
           <a data-role="button" data-theme="a" href="#page9">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p>
                   ?
               </p>
@@ -836,7 +821,7 @@
           <a id="season-roll-click" data-role="button" data-theme="a" href="#page10">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-season">
                   het terrasje
               </p>
@@ -921,7 +906,7 @@
           <a id="science-roll-click" data-role="button" data-theme="a" href="#page11">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="card">
+          <div data-controltype="htmlblock" class="on-card">
               <p id="kaart-tekst-science">
                 de grafiek
               </p>
