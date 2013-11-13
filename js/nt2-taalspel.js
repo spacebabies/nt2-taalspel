@@ -135,20 +135,31 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 
 // Dit deel gaat over het menudeel Gevorderden > Conjuncties.
     $(document).on('click', '#conjuncties-click',function(e) {
+        var classState = $('#kaart-extra').attr('class')
+        $('#kaart-extra').removeClass(classState).addClass('on-card');
+
         var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
         var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
-        var randomDobbel = extraImgs[Math.floor(Math.random()*extraImgs.length)];
+        var randomDobbel =extraImgs[Math.floor(Math.random()*basisImgs.length)];
 
-        $('#kaart-tekst-conjuncties').text(randomWord);
+        $('#kaart-tekst-extra').text(randomWord);
         $('#dobbel-extra').attr('src', randomDobbel);
     });
 
     $(document).on('click', '#conjuncties-new-click',function(e) {
-        var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
-        var randomWord = words[Math.floor(Math.random()*words.length)];
-
-        $('#kaart-tekst-conjuncties').text(randomWord);
+        var classState = $('#kaart-extra').attr('class')
+        if (classState == 'on-card') {
+            var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+            var randomWord = words[Math.floor(Math.random()*words.length)];
+            $('#kaart-tekst-extra').text(randomWord);
+        }
+        else {
+            $('#kaart-extra').removeClass('off-card').addClass('on-card');
+            var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
+            var randomWord = words[Math.floor(Math.random()*words.length)];
+            $('#kaart-tekst-extra').text(randomWord);
+        }
     });
 
     $(document).on('click', '#conjuncties-roll-click',function(e) {
@@ -156,6 +167,16 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         var randomDobbel = extraImgs[Math.floor(Math.random()*extraImgs.length)];
 
         $('#dobbel-extra').attr('src', randomDobbel);
+    });
+
+    $(document).on('click', '#extra-card-click',function(e) {
+        var classState = $('#kaart-extra').attr('class')
+        if (classState == 'on-card') {
+            $('#kaart-extra').removeClass('on-card').addClass('off-card');
+        }
+        else {
+            $('#kaart-extra').removeClass('off-card').addClass('on-card');
+        }
     });
 
 // Dit deel gaat over het menudeel Gevorderden > Separabele werkwoorden.
