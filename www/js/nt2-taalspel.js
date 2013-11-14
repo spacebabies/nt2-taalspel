@@ -404,6 +404,57 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#dobbel-3-season').attr('src', randomDobbel_3);
     });
 
+    $(document).on('click', '#pvn-seasons-click',function(e) {
+        var sideText = $('#dobbel-1-season').attr('src')
+        if (sideText == 'img/ik.png') {
+            $('#pvn-seasons-popup').html("<p>Ik = een subject</p><p>Voorbeeldzinnen:<br />Ik ga naar huis.<br />Op donderdagavond doe ik een cursus Nederlands.<br />Omdat ik weinig geld heb, koop ik groenten op de markt</p>").popup("open");
+        }
+        else if (sideText == 'img/jij.png') {
+            $('#pvn-seasons-popup').html("<p>Jij = een subject</p><p>Voorbeeldzinnen:<br />Jij hebt veel vrienden.<br />Ga jij mee boodschappen doen?<br />Wanneer kun jij me helpen?</p>").popup("open");
+        }
+        else if (sideText == 'img/hijzijhet.png') {
+            $('#pvn-seasons-popup').html("<p>Hij/Zij/Het = een subject</p><p>Voorbeeldzinnen:<br />Hij begrijpt weinig woorden.<br />Kan zij goed zingen?<br />Ik blijf binnen, omdat het regent.<br />Het maakt niet uit.</p>").popup("open");
+        }
+        else if (sideText == 'img/u.png') {
+            $('#pvn-seasons-popup').html("<p>U = een subject</p><p>Voorbeeldzinnen:<br />Kunt u mij helpen?<br />U houdt veel van klassieke muziek. <br />Terwijl u hier wacht, haal ik de formulieren.</p>").popup("open");
+        }
+        else if (sideText == 'img/wijjulliezij.png') {
+            $('#pvn-seasons-popup').html("<p>Wij/Jullie/Zij = een subject</p><p>Voorbeeldzinnen:<br />Hoe lang wonen jullie al in Amsterdam?  <br />Sinds zij hier wonen, is de buurt veel gezelliger. </p>").popup("open");
+        }
+        else {
+            $('#pvn-seasons-popup').html("<p>Joker betekent: kies zelf een subject</p><p>Voorbeeldzinnen:<br />Mijn broer werkt in een restaurant.<br />mijn broer = joker<br />Omdat de docent ziek is, gaat de les niet door.<br />de docent = joker</p>").popup("open");
+        }
+    });
+
+    $(document).on('click', '#tijd-seasons-click',function(e) {
+        var sideText = $('#dobbel-2-season').attr('src')
+        if (sideText == 'img/PRE.png') {
+            $('#tijd-seasons-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
+        }
+        else if (sideText == 'img/prf.png') {
+            $('#tijd-seasons-popup').html("<p>PRF = Perfectum<br />(voltooide tijd)</p><p>Voorbeeldzinnen:<br />Ik heb al mijn huiswerk gemaakt.<br />De jongens zijn vroeg naar huis gegaan.<br />Ze hebben bijna niet geslapen.</p>").popup("open");
+        }
+        else {
+            $('#tijd-seasons-popup').html("<p>IMP = Imperfectum<br />(verleden tijd)</p><p>Voorbeeldzinnen:<br />Een biertje in het café kostte 2,50.<br />Wilde jij vroeger docent worden?<br />Toen ik jou zag, was ik meteen verliefd. </p>").popup("open");
+        }
+    });
+
+    $(document).on('click', '#zin-seasons-click',function(e) {
+        var sideText = $('#dobbel-3-season').attr('src')
+        if (sideText == 'img/H.png') {
+            $('#zin-seasons-popup').html("<p>H = Hoofdzin<br />S / PV (/ R / V)<br />Subject / persoonsvorm / rest / verba</p><p>Voorbeeldzinnen:<br />De tafel / staat / midden in de kamer.<br />Deze tas / is / met de hand / gemaakt.<br />De resultaten van het onderzoek / werden / niet / bekendgemaakt.</p>").popup("open");
+        }
+        else if (sideText == 'img/hi.png') {
+            $('#zin-seasons-popup').html("<p>HI = Hoofdzin met inversie<br />I / PV / S (/ R / V)<br />iets anders / persoonsvorm / subject / rest / verba</p><p>Voorbeeldzinnen:<br />Morgen / eet / ik / bij mijn moeder.<br />Vroeger / aten / de mensen / veel aardappelen.<br />Daarom / heeft / het meisje / nog nooit / gerookt.</p>").popup("open");
+        }
+        else if (sideText == 'img/V.png') {
+            $('#zin-seasons-popup').html("<p>V = Vraagzin ja/nee<br />PV / S (/ R / V)?<br />persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Eet / jij / vlees? <br /> Willen / jullie / mee naar een concert van Prince? <br />Kon / zij / geen nieuw huis / kopen? </p>").popup("open");
+        }
+        else {
+            $('#zin-seasons-popup').html("<p>IV = Informatievraag<br />I / PV / S (/ R / V)?<br />Interrogatief / persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Waarom / heb / jij / me / gebeld? <br />Hoe lang / duurde / de voorstelling? <br />Wie / heb / je / uitgenodigd? <br />Wat / is / er / gebeurd?</p>").popup("open");
+        }
+    });
+
 // Dit deel gaat over het menudeel Thema's > Wetenschap.
     $(document).on('click', '#science-click',function(e) {
         var words = ['het onderzoek', 'de oorzaak', 'de grafiek', 'afnemen', 'blijken']
