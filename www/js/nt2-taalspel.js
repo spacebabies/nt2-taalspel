@@ -479,4 +479,17 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 
         $('#dobbel-science').attr('src', randomDobbel);
     });
+
+    $(document).on('click', '#tijd-science-click',function(e) {
+        var sideText = $('#dobbel-science').attr('src')
+        if (sideText == 'img/PRE.png') {
+            $('#tijd-science-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
+        }
+        else if (sideText == 'img/prf.png') {
+            $('#tijd-science-popup').html("<p>PRF = Perfectum<br />(voltooide tijd)</p><p>Voorbeeldzinnen:<br />Ik heb al mijn huiswerk gemaakt.<br />De jongens zijn vroeg naar huis gegaan.<br />Ze hebben bijna niet geslapen.</p>").popup("open");
+        }
+        else {
+            $('#tijd-science-popup').html("<p>IMP = Imperfectum<br />(verleden tijd)</p><p>Voorbeeldzinnen:<br />Een biertje in het café kostte 2,50.<br />Wilde jij vroeger docent worden?<br />Toen ik jou zag, was ik meteen verliefd. </p>").popup("open");
+        }
+    });
 });
