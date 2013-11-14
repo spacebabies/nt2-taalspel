@@ -354,6 +354,18 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#dobbel-separables').attr('src', randomDobbel);
     });
 
+    $(document).on('click', '#modus-popup-click',function(e) {
+        var sideText = $('#dobbel-separables').attr('src')
+        if (sideText == 'img/PV.png') {
+            $('#modus-popup').html("<p>PV = Persoonsvorm<br />Het verbum in de zin = Persoonsvorm</p><p>Voorbeeldzinnen:<br />Hij belt zijn moeder op. <br />Als hij zijn moeder opbelt….</p>").popup("open");
+        }
+        else if (sideText == 'img/inf.png') {
+            $('#modus-popup').html("<p>INF = Infinitief<br />Het verbum in de zin = Infinitief</p><p>Voorbeeldzinnen:<br />Kun je mij helpen afwassen? <br />Wanneer zullen we kennismaken?</p>").popup("open");
+        }
+        else {
+            $('#modus-popup').html("<p>PAR = Participium<br />Het verbum in de zin = Participium</p><p>Voorbeeldzinnen:<br />De docent heeft de opdracht uitgelegd. <br />Het pakketje is op tijd aangekomen.</p>").popup("open");
+        }
+    });
 
 // Dit deel gaat over het menudeel Thema's > Seizoenen..
     $(document).on('click', '#season-click',function(e) {
