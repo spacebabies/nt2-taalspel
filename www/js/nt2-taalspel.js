@@ -182,7 +182,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel =extraImgs[Math.floor(Math.random()*basisImgs.length)];
 
-        $('#kaart-tekst-extra').text(randomWord);
+        $('#kaart-tekst-conjuncties').text(randomWord);
         $('#dobbel-extra').attr('src', randomDobbel);
     });
 
@@ -191,13 +191,13 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         if (classState == 'on-card') {
             var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
             var randomWord = words[Math.floor(Math.random()*words.length)];
-            $('#kaart-tekst-extra').text(randomWord);
+            $('#kaart-tekst-conjuncties').text(randomWord);
         }
         else {
             $('#kaart-extra').removeClass('off-card').addClass('on-card');
             var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
             var randomWord = words[Math.floor(Math.random()*words.length)];
-            $('#kaart-tekst-extra').text(randomWord);
+            $('#kaart-tekst-conjuncties').text(randomWord);
         }
     });
 
