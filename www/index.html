@@ -1,42 +1,928 @@
 <!DOCTYPE html>
-<!--
-    Licensed to the Apache Software Foundation (ASF) under one
-    or more contributor license agreements.  See the NOTICE file
-    distributed with this work for additional information
-    regarding copyright ownership.  The ASF licenses this file
-    to you under the Apache License, Version 2.0 (the
-    "License"); you may not use this file except in compliance
-    with the License.  You may obtain a copy of the License at
-
-    http://www.apache.org/licenses/LICENSE-2.0
-
-    Unless required by applicable law or agreed to in writing,
-    software distributed under the License is distributed on an
-    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
-     KIND, either express or implied.  See the License for the
-    specific language governing permissions and limitations
-    under the License.
--->
 <html>
-    <head>
-        <meta charset="utf-8" />
-        <meta name="format-detection" content="telephone=no" />
-        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
-        <link rel="stylesheet" type="text/css" href="css/index.css" />
-        <title>Hello World</title>
-    </head>
-    <body>
-        <div class="app">
-            <h1>PhoneGap</h1>
-            <div id="deviceready" class="blink">
-                <p class="event listening">Connecting to Device</p>
-                <p class="event received">Device is Ready</p>
+<head>
+  <meta charset="utf-8">
+  <title>NT2-Taalspel</title>
+  <meta name="format-detection" content="telephone=no" />
+  <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black">
+
+  <link href="css/codiqa.ext.min.css" rel="stylesheet">
+  <link href="css/jquery.mobile-1.3.1.min.css" rel="stylesheet">
+  <link href="css/nt2-taalspel.css" rel="stylesheet">
+
+  <script src="js/jquery-1.9.1.min.js"></script>
+  <script src="js/jquery.mobile-1.3.1.min.js"></script>
+  <script src="js/codiqa.ext.min.js"></script>
+  <script src="phonegap.js"></script>
+  <script src="js/index.js"></script>
+  <script src="js/nt2-taalspel.js"></script>
+  <script type="text/javascript">
+    app.initialize();
+  </script>
+</head>
+<body>
+  <div data-role="page" data-control-title="NT2-Taalspel" data-theme="b"
+  id="page1">
+      <div data-role="panel" id="panel1" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+              <p class="panel-header">
+                NT2 Taalspel: een plek om te oefenen
+              </p>
+              <p class="panel-header">
+                Een taal leren
+              </p>
+              <p>
+                Een nieuwe taal leer je het best door te doen. Met NT2 Taalspel kun je meteen beginnen met doen. Je maakt vanaf het begin gebruik van de woorden en theorie die je al kent. 
+              </p>
+              <p class="panel-header">
+                Productie
+              </p>
+              <p>
+                Met behulp van deze app ga je zelf zinnen produceren. Met de dobbelstenen en de (werk)woordkaartjes creëert deze app steeds nieuwe voorwaarden waaraan die zin moet voldoen. Door dobbelstenen aan of uit te zetten maak je het zo makkelijk of moeilijk als je zelf wilt. Je bent vrij om te produceren wat je wilt, als ergens in de zin de voorwaarden en het woord maar op een goede manier terugkomen. 
+              </p>
+              <p class="panel-header">
+                Beoordeling en correctie
+              </p>
+              <p>
+                Speel NT2 Taalspel in een groepje, een tweetal of één op één met de docent. Zeg je zin of schrijf hem op. Spel woorden als je dat nodig vindt. Beoordeel elkaars zinnen door gebruik te maken van wat je al weet. Wissel kennis uit en geef elkaar feedback. 
+              </p>
+              <p class="panel-header">
+                Spelen met NT2 Taalspel maakt grammatica leuk!
+              </p>
+              <p>
+                Let op: soms is een combinatie erg lastig. Blijf niet uren proberen, maar gooi nog een keer :-)
+              </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header" data-position="fixed">
+          <h3>
+              Menu
+          </h3>
+          <a data-controltype="panelbutton" data-role="button" href="#panel1" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="c" data-inset="true">
+              <li class="bold-heading" data-role="list-divider" role="heading">
+                  NT2-Taalspel
+              </li>
+              <li data-theme="c">
+                  <a href="#page12" data-transition="slide">
+                      Eenvoudig
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#page4" data-transition="slide">
+                      Gevorderden
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a href="#page5" data-transition="slide">
+                      Thema's
+                  </a>
+              </li>
+          </ul>
+          <div data-controltype="htmlblock">
+              <p>
+                  Voor meer informatie over het NT2-Taalspel kunt u contact opnemen met
+                  de maakster van het spel <a href="http://www.taalinoost.nl/">Taal in Oost</a>.
+              </p>
+              <p><img src="img/packshot.jpg" style="width: 100%;" alt="NT2 Taalspel"></p>
+          </div>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Eenvoudig" data-theme="b"
+  id="page12">
+      <div class="header" data-theme="a" data-role="header">
+          <h3>
+              Eenvoudig
+          </h3>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="d" data-inset="true">
+              <li class="bold-heading" data-role="list-divider" role="heading">
+                  Kies een onderwerp:
+              </li>
+              <li data-theme="c">
+                  <a id="eenvoudig-click" href="#page3" data-transition="slide">
+                      Werkwoorden
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="basis-click" href="#page13" data-transition="slide">
+                      Conjuncties
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li id="tab-id">
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Werkwoorden" id="page3">
+      <div data-role="panel" id="panel3" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw werkwoord! 
+              <br>
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Aan – en uitzetten van de dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: Jij – PRE – V
+              <br>
+              Werkwoord: gaan
+            </p>
+            <p>
+              Ga jij naar school op zaterdag?
+              <br>
+              Wil je naar een café gaan dit weekend?
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel3" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h2>
+              Eenvoudig
+          </h2>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                <a id="pvn-popup-click" data-rel="popup" href="#pvn-popup">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-1-ev" style="width: 60px; height: 59px" src="img/ik.png" class="on-dobbel">
+                  </div>
+                </a>
+                <div data-role="popup" id="pvn-popup">
+                  <a id="tijd-dobbel-onoff" data-role="button" href="#page3" class="next-button">
+                    Dobbelsteen uitzetten
+                  </a>
+                  <p></p>
+                </div>
+              </div>
+              <div class="ui-block-b">
+                <a id="tijd-popup-click" data-rel="popup" href="#tijd-popup">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-2-ev" style="width: 60px; height: 60px" src="img/prf.png" class="on-dobbel">
+                  </div>
+                </a>
+                <div data-role="popup" id="tijd-popup">
+                  <a id="tijd-dobbel-onoff" data-role="button" href="#page3" class="next-button">
+                    Dobbelsteen uitzetten
+                  </a>
+                  <p></p>
+                </div>
+              </div>
+              <div class="ui-block-c">
+                <a id="zin-popup-click" data-rel="popup" href="#zin-popup">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-3-ev" style="width: 60px; height: 60px" src="img/hi.png" class="on-dobbel">
+                  </div>
+                </a>
+                <div data-role="popup" id="zin-popup">
+                  <a id="tijd-dobbel-onoff" data-role="button" href="#page3" class="next-button">
+                    Dobbelsteen uitzetten
+                  </a>
+                  <p></p>
+                </div>
+              </div>
+          </div>
+          <a id="eenvoudig-roll-click" data-role="button" data-theme="a" href="#page3">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p id="kaart-tekst-ev">
+                  hebben
+              </p>
+          </div>
+          <a id="eenvoudig-new-click" data-role="button" href="#page3" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page12" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Conjuncties" id="page13">
+      <div data-role="panel" id="panel13" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! Je kunt een werkwoord gebruiken, maar het hoeft niet. 
+              Maak vervolgens een zin met de conjunctie op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: omdat
+              <br>
+              Werkwoord (optioneel): zijn
+            </p>
+            <p>
+              Omdat de docent ziek is, gaat de les niet door.
+              <br>
+              Ik ben moe omdat ik naar een feestje ben geweest.
+            </p>
+            <p class="panel-header">
+              Aan- en uitzetten werkwoord
+            </p>
+            <p>
+              Wil je liever eerst alleen met de conjuncties oefenen? Zet dan het werkwoord uit en gooi alleen met de dobbelsteen.
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel13" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h2>
+              Conjuncties
+          </h2>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-basis" style="width: 60px; height: 59px" src="img/Omdat.png">
+                  </div>
+              </div>
+          </div>
+          <a id="basis-roll-click" data-role="button" data-theme="a" href="#page13">
+              Gooi!
+          </a>
+          <a id="basis-card-click" href="#page13">
+            <div id="kaart-basis" data-controltype="htmlblock" class="on-card">
+                <p id="kaart-tekst-basis">
+                    maken
+                </p>
             </div>
-        </div>
-        <script type="text/javascript" src="phonegap.js"></script>
-        <script type="text/javascript" src="js/index.js"></script>
-        <script type="text/javascript">
-            app.initialize();
-        </script>
-    </body>
+          <a>
+          <a id="basis-new-click" data-role="button" href="#page13" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page12" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Gevorderden" data-theme="b"
+  id="page4">
+      <div class="header" data-theme="a" data-role="header">
+          <h3>
+              Gevorderden
+          </h3>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="d" data-inset="true">
+              <li class="bold-heading" data-role="list-divider" role="heading">
+                  Kies een onderwerp:
+              </li>
+              <li data-theme="c">
+                  <a id="ww-click" href="#page6" data-transition="slide">
+                      Werkwoorden
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="conjuncties-click" href="#page7" data-transition="slide">
+                      Conjuncties
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="separables-click" href="#page8" data-transition="slide">
+                      Separabele werkwoorden
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="rel-pn-click" href="#page9" data-transition="slide">
+                      Relatief pronomen
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Thema's" id="page5">
+      <div class="header" data-theme="a" data-role="header">
+          <h3>
+              Thema's
+          </h3>
+      </div>
+      <div data-role="content">
+          <ul data-role="listview" data-divider-theme="d" data-inset="true">
+              <li class="bold-heading" data-role="list-divider" role="heading">
+                  Kies een thema:
+              </li>
+              <li data-theme="c">
+                  <a id="season-click" href="#page10" data-transition="slide">
+                      Seizoenen
+                  </a>
+              </li>
+              <li data-theme="c">
+                  <a id="science-click" href="#page11" data-transition="slide">
+                      Wetenschap
+                  </a>
+              </li>
+          </ul>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Werkwoorden" id="page6">
+      <div data-role="panel" id="panel5" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw werkwoord!
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen.
+            </p>
+            <p class="panel-header">
+              Aan – en uitzetten van de dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen.
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: Hij/zij/het – IMP- HI
+              <br>
+              Werkwoord: streven
+            </p>
+            <p>
+              Zijn hele leven streefde hij naar succes.
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel5" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Werkwoorden
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-1-ww" style="width: 60px; height: 59px" src="img/ik.png">
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-2-ww" style="width: 60px; height: 60px" src="img/prf.png">
+                  </div>
+              </div>
+              <div class="ui-block-c">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-3-ww" style="width: 60px; height: 60px" src="img/hi.png">
+                  </div>
+              </div>
+              <div class="ui-block-d">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-4-ww" style="width: 60px; height: 60px" src="img/joker.png">
+                  </div>
+              </div>
+          </div>
+          <a id="ww-roll-click" data-role="button" data-theme="a" href="#page6">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p id="kaart-tekst-ww">
+                  streven
+              </p>
+          </div>
+          <a id="ww-new-click" data-role="button" href="#page6" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page4" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Conjuncties" id="page7">
+      <div data-role="panel" id="panel6" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! Je kunt een werkwoord gebruiken, maar het hoeft niet. 
+              Maak vervolgens een zin met de conjunctie op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: nadat
+              <br>
+              Werkwoord (optioneel): doen
+            </p>
+            <p>
+              Nadat ik mijn huiswerk had gedaan, ging ik naar huis.
+              <br>
+              Hij doet het licht uit, nadat hij zijn tanden heeft gepoetst.
+            </p>
+            <p class="panel-header">
+              Aan- en uitzetten werkwoord
+            </p>
+            <p>
+              Wil je liever eerst alleen met de conjuncties oefenen? Zet dan het werkwoord uit en gooi alleen met de dobbelsteen.
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel6" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Conjuncties
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-extra" style="width: 60px; height: 60px" src="img/Doordat.png">
+                  </div>
+              </div>
+          </div>
+          <a id="conjuncties-roll-click" data-role="button" data-theme="a" href="#page7">
+              Gooi!
+          </a>
+          <a id="extra-card-click" href="#page13">
+            <div id="kaart-extra" data-controltype="htmlblock" class="on-card">
+                <p id="kaart-tekst-conjuncties">
+                    vergeten
+                </p>
+            </div>
+          <a>
+          <a id="conjuncties-new-click" data-role="button" href="#page7" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page4" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Separabele werkwoorden" id="page8">
+      <div data-role="panel" id="panel7" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! Je kunt een werkwoord gebruiken, maar het hoeft niet. 
+              Maak vervolgens een zin met de conjunctie op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: nadat
+              <br>
+              Werkwoord (optioneel): doen
+            </p>
+            <p>
+              Nadat ik mijn huiswerk had gedaan, ging ik naar huis.  
+              Hij doet het licht uit, nadat hij zijn tanden heeft gepoetst. 
+            </p>
+            <p class="panel-header">
+              Aan- en uitzetten werkwoord
+            </p>
+            <p>
+              Wil je liever eerst alleen met de conjuncties oefenen? Zet dan het werkwoord uit en gooi alleen met de dobbelsteen.
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel7" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Separabele werkwoorden
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-separables" style="width: 60px; height: 60px" src="img/inf.png">
+                  </div>
+              </div>
+          </div>
+          <a id="separables-roll-click" data-role="button" data-theme="a" href="#page8">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p id="kaart-tekst-separables">
+                  kennismaken
+              </p>
+          </div>
+          <a id="separables-new-click" data-role="button" href="#page8" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page4" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Relatief pronomen" id="page9">
+      <div data-role="panel" id="panel8" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw woord!
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld 1
+              <br>
+              Dobbelstenen: wie/wat + prep
+              <br>
+              Werkwoord (optioneel): de cursus
+            </p>
+            <p>
+              De cursus waarbij ik veel praktijkopdrachten moet doen.
+            </p>
+            <p class="panel-header">
+              Voorbeeld 2
+              <br>
+              Dobbelstenen: die/dat + prep
+              <br>
+              Werkwoord (optioneel): de nieuwe collega
+            </p>
+            <p>
+              De nieuwe collega die ik alle dingen uitleg. 
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel8" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Relatief pronomen
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="width: 60px; height: 60px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                  data-controltype="image">
+                      <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div style="width: 60px; height: 60px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                  data-controltype="image">
+                      <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+                  </div>
+              </div>
+              <div class="ui-block-c">
+                  <div style="width: 60px; height: 60px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                  data-controltype="image">
+                      <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+                  </div>
+              </div>
+              <div class="ui-block-d">
+                  <div style="width: 60px; height: 60px; position: relative; background-color: #fbfbfb; border: 1px solid #b8b8b8;"
+                  data-controltype="image">
+                      <img src="https://codiqa.com/static/images/v2/image.png" alt="image" style="position: absolute; top: 50%; left: 50%; margin-left: -16px; margin-top: -18px">
+                  </div>
+              </div>
+          </div>
+          <a data-role="button" data-theme="a" href="#page9">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p>
+                  ?
+              </p>
+          </div>
+          <a data-role="button" href="#page9" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page4" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Seizoenen" id="page10">
+      <div data-role="panel" id="panel10" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw Woord! 
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen en het woord.
+            </p>    
+            <p class="panel-header">
+              Aan- en uitzetten dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld 1 - Seizoenen
+              <br>
+              Dobbelstenen: Joker – PRF – IV
+              <br>
+              Woord: de paraplu
+            </p>
+            <p>
+              Wanneer heeft het jongetje een paraplu gekocht?
+            </p>
+            <p class="panel-header">
+              Voorbeeld 2 - Wetenschap
+              <br>
+              Dobbelstenen: IMP
+              <br>
+              Woord: het onderzoek
+            </p>
+            <p>
+              Het onderzoek bleek niet goed uitgevoerd.
+              <br>
+              Uit onderzoek bleek dat jongeren weer veel roken
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel10" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Seizoenen
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-1-season" style="width: 60px; height: 60px" src="img/ik.png">
+                  </div>
+              </div>
+              <div class="ui-block-b">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-2-season" style="width: 60px; height: 60px" src="img/prf.png">
+                  </div>
+              </div>
+              <div class="ui-block-c">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-3-season" style="width: 60px; height: 60px" src="img/hi.png">
+                  </div>
+              </div>
+          </div>
+          <a id="season-roll-click" data-role="button" data-theme="a" href="#page10">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p id="kaart-tekst-season">
+                  het terrasje
+              </p>
+          </div>
+          <a id="season-new-click" data-role="button" href="#page10" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page5" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+  <div data-role="page" data-control-title="Wetenschap" id="page11">
+      <div data-role="panel" id="panel11" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw Woord! 
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen en het woord.
+            </p>    
+            <p class="panel-header">
+              Aan- en uitzetten dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld 1 - Seizoenen
+              <br>
+              Dobbelstenen: Joker – PRF – IV
+              <br>
+              Woord: de paraplu
+            </p>
+            <p>
+              Wanneer heeft het jongetje een paraplu gekocht?
+            </p>
+            <p class="panel-header">
+              Voorbeeld 2 - Wetenschap
+              <br>
+              Dobbelstenen: IMP
+              <br>
+              Woord: het onderzoek
+            </p>
+            <p>
+              Het onderzoek bleek niet goed uitgevoerd.
+              <br>
+              Uit onderzoek bleek dat jongeren weer veel roken
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel11" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h3>
+              Wetenschap
+          </h3>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a">
+                  <div style="" data-controltype="image">
+                      <img id="dobbel-science" style="width: 60px; height: 60px" src="img/prf.png">
+                  </div>
+              </div>
+          </div>
+          <a id="science-roll-click" data-role="button" data-theme="a" href="#page11">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card">
+              <p id="kaart-tekst-science">
+                de grafiek
+              </p>
+          </div>
+          <a id="science-new-click" data-role="button" href="#page11" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page5" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+</body>
 </html>
