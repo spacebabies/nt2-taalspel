@@ -3,8 +3,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
    $(document).on('click', '#eenvoudig-click',function(e) {
         var words = ['hebben', 'zijn', 'gaan', 'doen', 'luisteren', 'wonen', 'herhalen','maken']
         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
@@ -25,8 +25,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 
     $(document).on('click', '#eenvoudig-roll-click',function(e) {
         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
         var randomDobbel_3 = zinImgs[Math.floor(Math.random()*zinImgs.length)];
@@ -63,7 +63,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         if (sideText == 'img/PRE.png') {
             $('#tijd-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
         }
-        else if (sideText == 'img/PRF.png') {
+        else if (sideText == 'img/prf.png') {
             $('#tijd-popup').html("<p>PRF = Perfectum<br />(voltooide tijd)</p><p>Voorbeeldzinnen:<br />Ik heb al mijn huiswerk gemaakt.<br />De jongens zijn vroeg naar huis gegaan.<br />Ze hebben bijna niet geslapen.</p>").popup("open");
         }
         else {
@@ -76,7 +76,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         if (sideText == 'img/H.png') {
             $('#zin-popup').html("<p>H = Hoofdzin<br />S / PV (/ R / V)<br />Subject / persoonsvorm / rest / verba</p><p>Voorbeeldzinnen:<br />De tafel / staat / midden in de kamer.<br />Deze tas / is / met de hand / gemaakt.<br />De resultaten van het onderzoek / werden / niet / bekendgemaakt.</p>").popup("open");
         }
-        else if (sideText == 'img/HI.png') {
+        else if (sideText == 'img/hi.png') {
             $('#zin-popup').html("<p>HI = Hoofdzin met inversie<br />I / PV / S (/ R / V)<br />iets anders / persoonsvorm / subject / rest / verba</p><p>Voorbeeldzinnen:<br />Morgen / eet / ik / bij mijn moeder.<br />Vroeger / aten / de mensen / veel aardappelen.<br />Daarom / heeft / het meisje / nog nooit / gerookt.</p>").popup("open");
         }
         else if (sideText == 'img/V.png') {
@@ -182,7 +182,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 // Dit deel gaat over het menudeel Gevorderden > Separabele werkwoorden.
     $(document).on('click', '#separables-click',function(e) {
         var words = ['uitleggen', 'voorbereiden', 'kennismaken', 'schoonmaken', 'opzoeken']
-        var modeImgs = ['img/PV.png', 'img/INF.png', 'img/PAR.png']
+        var modeImgs = ['img/PV.png', 'img/inf.png', 'img/PAR.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel = modeImgs[Math.floor(Math.random()*modeImgs.length)];
 
@@ -198,7 +198,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#separables-roll-click',function(e) {
-        var modeImgs = ['img/PV.png', 'img/INF.png', 'img/PAR.png']
+        var modeImgs = ['img/PV.png', 'img/inf.png', 'img/PAR.png']
         var randomDobbel = modeImgs[Math.floor(Math.random()*modeImgs.length)];
 
         $('#dobbel-separables').attr('src', randomDobbel);
@@ -209,8 +209,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     $(document).on('click', '#season-click',function(e) {
         var words = ['de paraplu', 'het terrasje', 'warm', 'de winterjas', 'buiten']
         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
@@ -231,8 +231,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 
     $(document).on('click', '#season-roll-click',function(e) {
         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
         var randomDobbel_3 = zinImgs[Math.floor(Math.random()*zinImgs.length)];
@@ -245,7 +245,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 // Dit deel gaat over het menudeel Thema's > Wetenschap.
     $(document).on('click', '#science-click',function(e) {
         var words = ['het onderzoek', 'de oorzaak', 'de grafiek', 'afnemen', 'blijken']
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
 
@@ -261,7 +261,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#science-roll-click',function(e) {
-        var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
+        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
         var randomDobbel = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
 
         $('#dobbel-science').attr('src', randomDobbel);
@@ -272,8 +272,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 //     $(document).on('click', '#ww-click',function(e) {
 //         var words = ['vinden','weten','durven','streven','veranderen']
 //         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-//         var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-//         var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+//         var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+//         var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
 //         var randomWord = words[Math.floor(Math.random()*words.length)];
 //         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
 //         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
@@ -297,8 +297,8 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
 //     });
 //     $(document).on('click', '#ww-roll-click',function(e) {
 //         var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-//         var tijdImgs = ['img/PRF.png', 'img/PRE.png', 'img/IMP.png']
-//         var zinImgs = ['img/H.png', 'img/HI.png', 'img/IV.png', 'img/V.png']
+//         var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+//         var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
 //         var voegwoordImgs = ['img/en.png', 'img/want.png', 'img/omdat.png', 'img/maar.png', 'img/hoewel.png']
 //         var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
 //         var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
