@@ -2,7 +2,7 @@
 <widget id="nl.spacebabies.nt2-taalspel" version="1.0.0" xmlns="http://www.w3.org/ns/widgets" xmlns:gap="http://phonegap.com/ns/1.0">
     <name>NT2 Taalspel</name>
     <description>
-        Leer Nederlands als tweede taal.
+        Een grammaticaal trapveldje
     </description>
     <author email="joost@spacebabies.nl" href="http://www.spacebabies.nl/">
         Space Babies
