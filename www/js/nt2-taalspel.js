@@ -254,7 +254,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#kaart-extra').removeClass(classState).addClass('on-card');
 
         var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
-        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
+        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png','img/joker.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel =extraImgs[Math.floor(Math.random()*basisImgs.length)];
 
@@ -278,7 +278,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#conjuncties-roll-click',function(e) {
-        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png']
+        var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 'img/Doordat.png','img/joker.png']
         var randomDobbel = extraImgs[Math.floor(Math.random()*extraImgs.length)];
 
         $('#dobbel-extra').attr('src', randomDobbel);
@@ -293,6 +293,41 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
             $('#kaart-extra').removeClass('off-card').addClass('on-card');
         }
     });
+
+    $(document).on('click', '#extra-popup-click',function(e) {
+        var sideText = $('#dobbel-extra').attr('src')
+        if (sideText == 'img/Omdat.png') {
+            $('#extra-popup').html("<p>Omdat maakt een bijzin<br />omdat = een reden</p><p>Voorbeeldzinnen:<br />Omdat het erg druk is op zaterdag doe ik boodschappen op vrijdag. <br />Je mag hier niet spelen omdat het gevaarlijk is.</p>").popup("open");
+        }
+        else if (sideText == 'img/Hoewel.png') {
+            $('#extra-popup').html("<p>Hoewel maakt een bijzin<br />omdat = een niet-logische relatie</p><p>Voorbeeldzinnen:<br />Hoewel hij het koud heeft, draagt hij geen jas.<br />Zij is niet blij met haar werk, hoewel ze een goed salaris heeft. </p>").popup("open");
+        }
+        else if (sideText == 'img/Terwijl.png') {
+            $('#extra-popup').html("<p>Terwijl maakt een bijzin<br />terwijl = op hetzelfde moment</p><p>Voorbeeldzinnen:<br />Terwijl wij de afwas doen, ruimen jullie de keuken op.<br />Mijn vriend werkt terwijl ik televisie kijk. </p>").popup("open");
+        }
+        else if (sideText == 'img/Sinds.png') {
+            $('#extra-popup').html("<p>Sinds maakt een bijzin<br />sinds = vanaf dat moment</p><p>Voorbeeldzinnen:<br />Sinds ik in Nederland woon, ben ik gelukkig. <br />De planten bloeien goed, sinds ze veel water krijgen. </p>").popup("open");
+        }
+        else if (sideText == 'img/Toen.png') {
+            $('#extra-popup').html("<p>Toen maakt een bijzin<br />1. toen = een periode in het verleden<br />2. toen = een moment in het verleden</p><p>Voorbeeldzinnen:<br />1. Toen ik klein was, woonde ik in een flat.<br />2. De man rende weg, toen hij de politie zag.</p>").popup("open");
+        }
+        else if (sideText == 'img/Als.png') {
+            $('#extra-popup').html("<p>Als maakt een bijzin<br />als = een voorwaarde</p><p>Voorbeeldzinnen:<br />Als ik tijd heb, bel ik je vanavond.<br />Hij krijgt een brommer, als hij achttien is.</p>").popup("open");
+        }
+        else if (sideText == 'img/Nadat.png') {
+            $('#extra-popup').html("<p>Nadat maakt een bijzin<br />nadat = na een moment in het verleden</p><p>Voorbeeldzinnen:<br />Nadat de brandweer was gekomen, werd de vrouw gered.<br />De pizza arriveert meestal een half uur nadat u besteld hebt.</p>").popup("open");
+        }
+        else if (sideText == 'img/Doordat.png') {
+            $('#extra-popup').html("<p>Doordat maakt een bijzin<br />doordat = oorzaak</p><p>Voorbeeldzinnen:<br />Doordat ik ziek was, kon ik het examen niet doen.<br />Iedereen kwam te laat op zijn werk, doordat de treinen vertraging hadden.</p>").popup("open");
+        }
+        else if (sideText == 'img/Voordat.png') {
+            $('#extra-popup').html("<p>Voordat maakt een bijzin<br />voordat = voor een moment in de toekomst</p><p>Voorbeeldzinnen:<br />Voordat je naar huis gaat, sluit je de winkel af.<br />Let goed op, voordat er dingen mis gaan.</p>").popup("open");
+        }
+        else {
+            $('#extra-popup').html("<p>Joker betekent: kies zelf een conjunctie</p><p>Voorbeeldzinnen:<br />Totdat hij klaar is met zijn huiswerk, mag hij niet naar buiten. <br />Sinds de verwarming is gerepareerd, is het lekker warm in huis. </p>").popup("open");
+        }
+    });
+
 
 // Dit deel gaat over het menudeel Gevorderden > Separabele werkwoorden.
     $(document).on('click', '#separables-click',function(e) {
