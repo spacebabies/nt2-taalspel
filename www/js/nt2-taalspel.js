@@ -36,7 +36,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#dobbel-3-ev').attr('src', randomDobbel_3);
     });
 
-    $(document).on('click', '#pvn-popup-click',function(e) {
+    $(document).on('click', '#pvn-popup-ev-click',function(e) {
         var sideText = $('#dobbel-1-ev').attr('src')
         if (sideText == 'img/ik.png') {
             $('#pvn-popup').html("<p>Ik = een subject</p><p>Voorbeeldzinnen:<br />Ik ga naar huis.<br />Op donderdagavond doe ik een cursus Nederlands.<br />Omdat ik weinig geld heb, koop ik groenten op de markt</p>").popup("open");
@@ -58,7 +58,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         }
     });
 
-    $(document).on('click', '#tijd-popup-click',function(e) {
+    $(document).on('click', '#tijd-popup-ev-click',function(e) {
         var sideText = $('#dobbel-2-ev').attr('src')
         if (sideText == 'img/PRE.png') {
             $('#tijd-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
@@ -71,7 +71,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         }
     });
 
-    $(document).on('click', '#zin-popup-click',function(e) {
+    $(document).on('click', '#zin-popup-ev-click',function(e) {
         var sideText = $('#dobbel-3-ev').attr('src')
         if (sideText == 'img/H.png') {
             $('#zin-popup').html("<p>H = Hoofdzin<br />S / PV (/ R / V)<br />Subject / persoonsvorm / rest / verba</p><p>Voorbeeldzinnen:<br />De tafel / staat / midden in de kamer.<br />Deze tas / is / met de hand / gemaakt.<br />De resultaten van het onderzoek / werden / niet / bekendgemaakt.</p>").popup("open");
@@ -93,7 +93,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         $('#kaart-basis').removeClass(classState).addClass('on-card');
 
         var words = ['maken', 'doen', 'vergeten', 'hebben', 'zijn']
-        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png', 'img/joker.png']
         var randomWord = words[Math.floor(Math.random()*words.length)];
         var randomDobbel = basisImgs[Math.floor(Math.random()*basisImgs.length)];
 
@@ -117,7 +117,7 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
     });
 
     $(document).on('click', '#basis-roll-click',function(e) {
-        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png']
+        var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 'img/Sinds.png', 'img/Terwijl.png','img/joker.png']
         var randomDobbel = basisImgs[Math.floor(Math.random()*basisImgs.length)];
 
         $('#dobbel-basis').attr('src', randomDobbel);
@@ -130,6 +130,31 @@ $(document).on('pagebeforeshow','#page1' ,function(e,data){
         }
         else {
             $('#kaart-basis').removeClass('off-card').addClass('on-card');
+        }
+    });
+
+    $(document).on('click', '#basis-popup-click',function(e) {
+        var sideText = $('#dobbel-basis').attr('src')
+        if (sideText == 'img/Omdat.png') {
+            $('#basis-popup').html("<p>Omdat maakt een bijzin<br />omdat = een reden</p><p>Voorbeeldzinnen:<br />Omdat het erg druk is op zaterdag doe ik boodschappen op vrijdag. <br />Je mag hier niet spelen omdat het gevaarlijk is.</p>").popup("open");
+        }
+        else if (sideText == 'img/Hoewel.png') {
+            $('#basis-popup').html("<p>Hoewel maakt een bijzin<br />omdat = een niet-logische relatie</p><p>Voorbeeldzinnen:<br />Hoewel hij het koud heeft, draagt hij geen jas.<br />Zij is niet blij met haar werk, hoewel ze een goed salaris heeft. </p>").popup("open");
+        }
+        else if (sideText == 'img/Terwijl.png') {
+            $('#basis-popup').html("<p>Terwijl maakt een bijzin<br />terwijl = op hetzelfde moment</p><p>Voorbeeldzinnen:<br />Terwijl wij de afwas doen, ruimen jullie de keuken op.<br />Mijn vriend werkt terwijl ik televisie kijk. </p>").popup("open");
+        }
+        else if (sideText == 'img/Sinds.png') {
+            $('#basis-popup').html("<p>Sinds maakt een bijzin<br />sinds = vanaf dat moment</p><p>Voorbeeldzinnen:<br />Sinds ik in Nederland woon, ben ik gelukkig. <br />De planten bloeien goed, sinds ze veel water krijgen. </p>").popup("open");
+        }
+        else if (sideText == 'img/Toen.png') {
+            $('#basis-popup').html("<p>Toen maakt een bijzin<br />1. toen = een periode in het verleden<br />2. toen = een moment in het verleden</p><p>Voorbeeldzinnen:<br />1. Toen ik klein was, woonde ik in een flat.<br />2. De man rende weg, toen hij de politie zag.</p>").popup("open");
+        }
+        else if (sideText == 'img/Als.png') {
+            $('#basis-popup').html("<p>Als maakt een bijzin<br />als = een voorwaarde</p><p>Voorbeeldzinnen:<br />Als ik tijd heb, bel ik je vanavond.<br />Hij krijgt een brommer, als hij achttien is.</p>").popup("open");
+        }
+        else {
+            $('#basis-popup').html("<p>Joker betekent: kies zelf een conjunctie</p><p>Voorbeeldzinnen:<br />Totdat hij klaar is met zijn huiswerk, mag hij niet naar buiten. <br />Sinds de verwarming is gerepareerd, is het lekker warm in huis. </p>").popup("open");
         }
     });
 
