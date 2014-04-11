@@ -19,6 +19,11 @@
     font-weight: normal;
     font-style: normal;
 }
+
+#logo {
+  height: 50%;
+  width: 50%;
+}
 .on-card {
   border: 5px double #006CB5;
   padding: 20px;
