@@ -45,6 +45,10 @@
   background-color: white;
   opacity: 0.25;
 }
+
+.off-dobbel {
+  opacity: 0.25;
+}
     
 .dobbel-grid {
     margin-top: 10px;

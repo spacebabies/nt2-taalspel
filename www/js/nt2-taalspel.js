@@ -1,91 +1,124 @@
+function selectRandom(data) {
+    length = data.length
+    return data[Math.floor(Math.random()*length)]
+};
+
+function cardSwitch(card) {
+    alert("clicked");
+    classState = card.attr('class')
+    if (classState == 'on-card') {
+        card.removeClass('on-card').addClass('off-card');
+    }
+    else {
+        card.removeClass('off-card').addClass('on-card');
+    }
+};
+
+function switchDobbel(dobbel) {
+    var dobbelState = $(dobbel).attr('class');
+    if (dobbelState == 'on-dobbel') {
+        $(dobbel).removeClass('on-dobbel').addClass('off-dobbel');
+    }
+    else {
+        $(dobbel).removeClass('off-dobbel').addClass('on-dobbel');
+    }
+};
+
 $(document).on('pagebeforeshow','#page1' ,function(e,data){
-//Dit deel geldt voor het deel Eenvoudig > Werkwoorden van het menu.
-   $(document).on('click', '#eenvoudig-click',function(e) {
-        var words = ['hebben', 'zijn', 'gaan', 'doen', 'luisteren', 'wonen', 'herhalen','maken']
-        var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
-        var randomWord = words[Math.floor(Math.random()*words.length)];
-        var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
-        var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
-        var randomDobbel_3 = zinImgs[Math.floor(Math.random()*zinImgs.length)];
-
-        $('#kaart-tekst-ev').text(randomWord);
-        $('#dobbel-1-ev').attr('src', randomDobbel_1);
-        $('#dobbel-2-ev').attr('src', randomDobbel_2);
-        $('#dobbel-3-ev').attr('src', randomDobbel_3);
+    var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
+    var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
+    var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
+    var startWords = ['doen', 'pakken', 'maken', 'eten', 'slapen', 'lezen', 'studeren', 'gebruiken',  'schrijven',  'kopen']
+   
+    //Dit deel geldt voor het deel Werkwoorden > Start van het menu.
+   $(document).on('click', '#start-click',function(e) {
+        $('#kaart-tekst-start').text(selectRandom(startWords));
+        $('#dobbel-1-start').attr('src', selectRandom(pvnImgs));
+        $('#dobbel-2-start').attr('src', selectRandom(tijdImgs));
+        $('#dobbel-3-start').attr('src', selectRandom(zinImgs));
     });
 
-    $(document).on('click', '#eenvoudig-new-click',function(e) {
-        var words = ['hebben', 'zijn', 'gaan', 'doen', 'luisteren', 'wonen', 'herhalen','maken']
-        var randomWord = words[Math.floor(Math.random()*words.length)];
-
-        $('#kaart-tekst-ev').text(randomWord);
+    $(document).on('click', '#start-new-click',function(e) {
+        $('#kaart-tekst-start').text(selectRandom(startWords));
     });
 
-    $(document).on('click', '#eenvoudig-roll-click',function(e) {
-        var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
-        var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
-        var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
-        var randomDobbel_1 = pvnImgs[Math.floor(Math.random()*pvnImgs.length)];
-        var randomDobbel_2 = tijdImgs[Math.floor(Math.random()*tijdImgs.length)];
-        var randomDobbel_3 = zinImgs[Math.floor(Math.random()*zinImgs.length)];
-
-        $('#dobbel-1-ev').attr('src', randomDobbel_1);
-        $('#dobbel-2-ev').attr('src', randomDobbel_2);
-        $('#dobbel-3-ev').attr('src', randomDobbel_3);
+    $(document).on('click', '#start-roll-click',function(e) {
+        $('#dobbel-1-start').attr('src', selectRandom(pvnImgs));
+        $('#dobbel-2-start').attr('src', selectRandom(tijdImgs));
+        $('#dobbel-3-start').attr('src', selectRandom(zinImgs));
     });
 
-    $(document).on('click', '#pvn-popup-ev-click',function(e) {
-        var sideText = $('#dobbel-1-ev').attr('src')
-        if (sideText == 'img/ik.png') {
-            $('#pvn-popup').html("<p>Ik = een subject</p><p>Voorbeeldzinnen:<br />Ik ga naar huis.<br />Op donderdagavond doe ik een cursus Nederlands.<br />Omdat ik weinig geld heb, koop ik groenten op de markt</p>").popup("open");
-        }
-        else if (sideText == 'img/jij.png') {
-            $('#pvn-popup').html("<p>Jij = een subject</p><p>Voorbeeldzinnen:<br />Jij hebt veel vrienden.<br />Ga jij mee boodschappen doen?<br />Wanneer kun jij me helpen?</p>").popup("open");
-        }
-        else if (sideText == 'img/hijzijhet.png') {
-            $('#pvn-popup').html("<p>Hij/Zij/Het = een subject</p><p>Voorbeeldzinnen:<br />Hij begrijpt weinig woorden.<br />Kan zij goed zingen?<br />Ik blijf binnen, omdat het regent.<br />Het maakt niet uit.</p>").popup("open");
-        }
-        else if (sideText == 'img/u.png') {
-            $('#pvn-popup').html("<p>U = een subject</p><p>Voorbeeldzinnen:<br />Kunt u mij helpen?<br />U houdt veel van klassieke muziek. <br />Terwijl u hier wacht, haal ik de formulieren.</p>").popup("open");
-        }
-        else if (sideText == 'img/wijjulliezij.png') {
-            $('#pvn-popup').html("<p>Wij/Jullie/Zij = een subject</p><p>Voorbeeldzinnen:<br />Hoe lang wonen jullie al in Amsterdam?  <br />Sinds zij hier wonen, is de buurt veel gezelliger. </p>").popup("open");
-        }
-        else {
-            $('#pvn-popup').html("<p>Joker betekent: kies zelf een subject</p><p>Voorbeeldzinnen:<br />Mijn broer werkt in een restaurant.<br />mijn broer = joker<br />Omdat de docent ziek is, gaat de les niet door.<br />de docent = joker</p>").popup("open");
-        }
-    });
+    $(document).delegate('.dobbel', 'click', function(e) {
+        alert(this)
+        var dobbel = $(this).getElementsByTagName('img')[0];
+        alert(dobbel);
+    })
+    // var dobbels = {'#dobbel-1-start', '#dobbel-2-start', '#dobbel-3-start';
 
-    $(document).on('click', '#tijd-popup-ev-click',function(e) {
-        var sideText = $('#dobbel-2-ev').attr('src')
-        if (sideText == 'img/PRE.png') {
-            $('#tijd-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
-        }
-        else if (sideText == 'img/prf.png') {
-            $('#tijd-popup').html("<p>PRF = Perfectum<br />(voltooide tijd)</p><p>Voorbeeldzinnen:<br />Ik heb al mijn huiswerk gemaakt.<br />De jongens zijn vroeg naar huis gegaan.<br />Ze hebben bijna niet geslapen.</p>").popup("open");
-        }
-        else {
-            $('#tijd-popup').html("<p>IMP = Imperfectum<br />(verleden tijd)</p><p>Voorbeeldzinnen:<br />Een biertje in het café kostte 2,50.<br />Wilde jij vroeger docent worden?<br />Toen ik jou zag, was ik meteen verliefd. </p>").popup("open");
-        }
-    });
+    // for (var dobbel in dobbels) {
+    //     $(document).on('click', dobbel, function(e) {
+    //         alert("clicked!" + dobbel)
+    //         switchDobbel(dobbel);
+    //     });
+    // };
 
-    $(document).on('click', '#zin-popup-ev-click',function(e) {
-        var sideText = $('#dobbel-3-ev').attr('src')
-        if (sideText == 'img/H.png') {
-            $('#zin-popup').html("<p>H = Hoofdzin<br />S / PV (/ R / V)<br />Subject / persoonsvorm / rest / verba</p><p>Voorbeeldzinnen:<br />De tafel / staat / midden in de kamer.<br />Deze tas / is / met de hand / gemaakt.<br />De resultaten van het onderzoek / werden / niet / bekendgemaakt.</p>").popup("open");
-        }
-        else if (sideText == 'img/hi.png') {
-            $('#zin-popup').html("<p>HI = Hoofdzin met inversie<br />I / PV / S (/ R / V)<br />iets anders / persoonsvorm / subject / rest / verba</p><p>Voorbeeldzinnen:<br />Morgen / eet / ik / bij mijn moeder.<br />Vroeger / aten / de mensen / veel aardappelen.<br />Daarom / heeft / het meisje / nog nooit / gerookt.</p>").popup("open");
-        }
-        else if (sideText == 'img/V.png') {
-            $('#zin-popup').html("<p>V = Vraagzin ja/nee<br />PV / S (/ R / V)?<br />persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Eet / jij / vlees? <br /> Willen / jullie / mee naar een concert van Prince? <br />Kon / zij / geen nieuw huis / kopen? </p>").popup("open");
-        }
-        else {
-            $('#zin-popup').html("<p>IV = Informatievraag<br />I / PV / S (/ R / V)?<br />Interrogatief / persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Waarom / heb / jij / me / gebeld? <br />Hoe lang / duurde / de voorstelling? <br />Wie / heb / je / uitgenodigd? <br />Wat / is / er / gebeurd?</p>").popup("open");
-        }
-    });
+    // var divElement = document.getElementById("dobbels-start")
+    // var dobbels = divElement.childNodes
+    // for (var i = 0; i < dobbels.length; i++) {
+    //     var dobbel = smileys[i];
+    //     dobbel.addEventListener('click', cardSwitch, false);
+    // }
+
+    // $(document).on('click', '#pvn-popup-ev-click',function(e) {
+    //     var sideText = $('#dobbel-1-ev').attr('src')
+    //     if (sideText == 'img/ik.png') {
+    //         $('#pvn-popup').html("<p>Ik = een subject</p><p>Voorbeeldzinnen:<br />Ik ga naar huis.<br />Op donderdagavond doe ik een cursus Nederlands.<br />Omdat ik weinig geld heb, koop ik groenten op de markt</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/jij.png') {
+    //         $('#pvn-popup').html("<p>Jij = een subject</p><p>Voorbeeldzinnen:<br />Jij hebt veel vrienden.<br />Ga jij mee boodschappen doen?<br />Wanneer kun jij me helpen?</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/hijzijhet.png') {
+    //         $('#pvn-popup').html("<p>Hij/Zij/Het = een subject</p><p>Voorbeeldzinnen:<br />Hij begrijpt weinig woorden.<br />Kan zij goed zingen?<br />Ik blijf binnen, omdat het regent.<br />Het maakt niet uit.</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/u.png') {
+    //         $('#pvn-popup').html("<p>U = een subject</p><p>Voorbeeldzinnen:<br />Kunt u mij helpen?<br />U houdt veel van klassieke muziek. <br />Terwijl u hier wacht, haal ik de formulieren.</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/wijjulliezij.png') {
+    //         $('#pvn-popup').html("<p>Wij/Jullie/Zij = een subject</p><p>Voorbeeldzinnen:<br />Hoe lang wonen jullie al in Amsterdam?  <br />Sinds zij hier wonen, is de buurt veel gezelliger. </p>").popup("open");
+    //     }
+    //     else {
+    //         $('#pvn-popup').html("<p>Joker betekent: kies zelf een subject</p><p>Voorbeeldzinnen:<br />Mijn broer werkt in een restaurant.<br />mijn broer = joker<br />Omdat de docent ziek is, gaat de les niet door.<br />de docent = joker</p>").popup("open");
+    //     }
+    // });
+
+    // $(document).on('click', '#tijd-popup-ev-click',function(e) {
+    //     var sideText = $('#dobbel-2-ev').attr('src')
+    //     if (sideText == 'img/PRE.png') {
+    //         $('#tijd-popup').html("<p>PRE = Presens<br />(tegenwoordige tijd)</p><p>Voorbeeldzinnen:<br />Ik luister naar de radio. <br />Waarom duurt alles zo lang?<br />De spelers wachten in de kleedkamer. </p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/prf.png') {
+    //         $('#tijd-popup').html("<p>PRF = Perfectum<br />(voltooide tijd)</p><p>Voorbeeldzinnen:<br />Ik heb al mijn huiswerk gemaakt.<br />De jongens zijn vroeg naar huis gegaan.<br />Ze hebben bijna niet geslapen.</p>").popup("open");
+    //     }
+    //     else {
+    //         $('#tijd-popup').html("<p>IMP = Imperfectum<br />(verleden tijd)</p><p>Voorbeeldzinnen:<br />Een biertje in het café kostte 2,50.<br />Wilde jij vroeger docent worden?<br />Toen ik jou zag, was ik meteen verliefd. </p>").popup("open");
+    //     }
+    // });
+
+    // $(document).on('click', '#zin-popup-ev-click',function(e) {
+    //     var sideText = $('#dobbel-3-ev').attr('src')
+    //     if (sideText == 'img/H.png') {
+    //         $('#zin-popup').html("<p>H = Hoofdzin<br />S / PV (/ R / V)<br />Subject / persoonsvorm / rest / verba</p><p>Voorbeeldzinnen:<br />De tafel / staat / midden in de kamer.<br />Deze tas / is / met de hand / gemaakt.<br />De resultaten van het onderzoek / werden / niet / bekendgemaakt.</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/hi.png') {
+    //         $('#zin-popup').html("<p>HI = Hoofdzin met inversie<br />I / PV / S (/ R / V)<br />iets anders / persoonsvorm / subject / rest / verba</p><p>Voorbeeldzinnen:<br />Morgen / eet / ik / bij mijn moeder.<br />Vroeger / aten / de mensen / veel aardappelen.<br />Daarom / heeft / het meisje / nog nooit / gerookt.</p>").popup("open");
+    //     }
+    //     else if (sideText == 'img/V.png') {
+    //         $('#zin-popup').html("<p>V = Vraagzin ja/nee<br />PV / S (/ R / V)?<br />persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Eet / jij / vlees? <br /> Willen / jullie / mee naar een concert van Prince? <br />Kon / zij / geen nieuw huis / kopen? </p>").popup("open");
+    //     }
+    //     else {
+    //         $('#zin-popup').html("<p>IV = Informatievraag<br />I / PV / S (/ R / V)?<br />Interrogatief / persoonsvorm / subject / rest / verba?</p><p>Voorbeeldzinnen:<br />Waarom / heb / jij / me / gebeld? <br />Hoe lang / duurde / de voorstelling? <br />Wie / heb / je / uitgenodigd? <br />Wat / is / er / gebeurd?</p>").popup("open");
+    //     }
+    // });
  
 // Dit deel gaat over het menudeel Eenvoudig > Conjuncties.
     $(document).on('click', '#basis-click',function(e) {
