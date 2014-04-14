@@ -1,8 +1,20 @@
-var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 'img/wijjulliezij.png', 'img/joker.png']
+var pvnImgs = ['img/ik.png', 'img/jij.png', 'img/hijzijhet.png', 'img/u.png', 
+			'img/wijjulliezij.png', 'img/joker.png']
 
 var tijdImgs = ['img/prf.png', 'img/PRE.png', 'img/IMP.png']
 
+var simpleTijdImgs = ['img/PRE.png', 'img/IMP.png']
+
 var zinImgs = ['img/H.png', 'img/hi.png', 'img/IV.png', 'img/V.png']
+
+var modeImgs = ['img/PV.png', 'img/inf.png', 'img/PAR.png']
+
+var basisImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 
+			'img/Sinds.png', 'img/Terwijl.png', 'img/joker.png']
+
+var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png', 
+			'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 
+			'img/Doordat.png','img/joker.png']
 
 var startWords = ['doen', 'pakken', 'maken', 'eten', 'slapen', 'lezen', 'studeren', 'gebruiken',  
                 'schrijven',  'kopen', 'lopen', 'betalen', 'dromen', 'durven', 'luisteren',
@@ -25,6 +37,11 @@ var separabelWords = ['voorbereiden', 'kennismaken', 'meedoen', 'meenemen', 'nee
 var infWords = ['staan te', 'liggen te', 'lopen te', 'proberen te', 'zitten te', 
                 '(niet) durven te', 'weigeren te', 'hoeven (niet) te', 'laten', 'leren', 
                 'blijven', 'komen']
+
+var easyCjWords = ['maken', 'doen', 'gaan', 'kopen', 'eten', 'werken', 'wonen']
+
+var extraWords = ['vergeten', 'leren', 'lopen']
+var hardCjWords = easyCjWords.concat(extraWords);
 
 var relapWords = ['de man', 'het boek', 'de docent', 'het huis', 'het land', 'de jas',
                 'de vriend/vriendin', 'de laptop', 'het probleem', 'het televisieprogramma',
