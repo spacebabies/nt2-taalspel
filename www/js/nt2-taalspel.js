@@ -34,7 +34,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#start-new-click',function(e) {
-        $('#kaart-tekst-start').text(selectRandom(startWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-start').text(selectRandom(startWords));  
+        }
     });
 
     $(document).on('click', '#start-roll-click',function(e) {
@@ -51,7 +53,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         $('#dobbel-3-modal').attr('src', selectRandom(zinImgs));
     });
     $(document).on('click', '#modal-new-click',function(e) {
-        $('#kaart-tekst-modal').text(selectRandom(modaalWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-modal').text(selectRandom(modaalWords));
+        }
     });
 
     $(document).on('click', '#modal-roll-click',function(e) {
@@ -68,7 +72,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         $('#dobbel-3-prepos').attr('src', selectRandom(zinImgs));
     });
     $(document).on('click', '#prepos-new-click',function(e) {
-        $('#kaart-tekst-prepos').text(selectRandom(prepoWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-prepos').text(selectRandom(prepoWords));
+        }
     });
 
     $(document).on('click', '#prepos-roll-click',function(e) {
@@ -85,7 +91,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         $('#dobbel-4-sepa').attr('src', selectRandom(modeImgs));
     });
     $(document).on('click', '#sepa-new-click',function(e) {
-        $('#kaart-tekst-sepa').text(selectRandom(separabelWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-sepa').text(selectRandom(separabelWords));
+        }
     });
 
     $(document).on('click', '#sepa-roll-click',function(e) {
@@ -102,7 +110,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#inf-new-click',function(e) {
-        $('#kaart-tekst-inf').text(selectRandom(infWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-inf').text(selectRandom(infWords));
+        }
     });
 
     $(document).on('click', '#inf-roll-click',function(e) {
@@ -118,7 +128,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#easy-cj-new-click',function(e) {
-        $('#kaart-tekst-easy-cj').text(selectRandom(easyCjWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-easy-cj').text(selectRandom(easyCjWords));
+        }
     });
 
     $(document).on('click', '#easy-cj-roll-click',function(e) {
@@ -133,7 +145,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#hard-cj-new-click',function(e) {
-        $('#kaart-tekst-hard-cj').text(selectRandom(hardCjWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-hard-cj').text(selectRandom(hardCjWords));
+        }
     });
 
     $(document).on('click', '#hard-cj-roll-click',function(e) {
@@ -147,7 +161,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         $('#dobbel-relatief').attr('src', selectRandom(relPronImgs));
     });
     $(document).on('click', '#relatief-new-click',function(e) {
-        $('#kaart-tekst-relatief').text(selectRandom(relapWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-relatief').text(selectRandom(relapWords));
+        }
     });
 
     $(document).on('click', '#relatief-roll-click',function(e) {
@@ -162,7 +178,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         $('#dobbel-2-indirect').attr('src', selectRandom(tijdImgs));
     });
     $(document).on('click', '#indirect-new-click',function(e) {
-        $('#kaart-tekst-indirect').text(selectRandom(indirectWords));
+        if ($('.card').attr('class') != "off-card card") {
+            $('#kaart-tekst-indirect').text(selectRandom(indirectWords));
+        }
     });
 
     $(document).on('click', '#indirect-roll-click',function(e) {
