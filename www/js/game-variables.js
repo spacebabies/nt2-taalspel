@@ -16,6 +16,8 @@ var extraImgs = ['img/Omdat.png', 'img/Hoewel.png', 'img/Als.png', 'img/Toen.png
 			'img/Sinds.png', 'img/Terwijl.png', 'img/Nadat.png', 'img/Voordat.png', 
 			'img/Doordat.png','img/joker.png']
 
+var relPronImgs = ['img/DieDatprep.png', 'img/WaarWieprep.png']
+
 var startWords = ['doen', 'pakken', 'maken', 'eten', 'slapen', 'lezen', 'studeren', 'gebruiken',  
                 'schrijven',  'kopen', 'lopen', 'betalen', 'dromen', 'durven', 'luisteren',
                 'lachen', 'oefenen', 'praten', 'reizen', 'sturen', 'stoppen', 'scheiden',
