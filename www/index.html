@@ -17,6 +17,7 @@
   <script src="js/codiqa.ext.min.js"></script>
   <script src="phonegap.js"></script>
   <script src="js/index.js"></script>
+  <script src="js/game-variables.js"></script>
   <script src="js/nt2-taalspel.js"></script>
   <script type="text/javascript">
     app.initialize();
@@ -125,12 +126,12 @@
                   </a>
               </li>
               <li data-theme="c">
-                  <a id="basis-click" href="#page2b" data-transition="slide">
+                  <a id="modal-click" href="#page2b" data-transition="slide">
                       Modaal
                   </a>
               </li>
               <li data-theme="c">
-                  <a id="basis-click" href="#page2c" data-transition="slide">
+                  <a id="prepos-click" href="#page2c" data-transition="slide">
                       Met prepositie
                   </a>
               </li>
@@ -598,12 +599,181 @@
           <a id="start-roll-click" data-role="button" data-theme="a" href="#page2a">
               Gooi!
           </a>
-          <div data-controltype="htmlblock" class="on-card">
+          <div data-controltype="htmlblock" class="on-card card">
               <p id="kaart-tekst-start">
                   hebben
               </p>
           </div>
           <a id="start-new-click" data-role="button" href="#page2a" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page2" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <div data-role="page" data-control-title="Modale werkwoorden" id="page2b">
+      <div data-role="panel" id="panel2b" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw werkwoord! 
+              <br>
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Aan – en uitzetten van de dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: Jij – PRE – V
+              <br>
+              Werkwoord: gaan
+            </p>
+            <p>
+              Ga jij naar school op zaterdag?
+              <br>
+              Wil je naar een café gaan dit weekend?
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel2b" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h2>
+              Modale werkwoorden
+          </h2>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a dobbel">
+                <div style="" data-controltype="image">
+                    <img id="dobbel-1-modal" style="width: 60px; height: 59px" src="img/ik.png" class="on-dobbel">
+                </div>
+              </div>
+              <div class="ui-block-c dobbel">
+                <div style="" data-controltype="image">
+                    <img id="dobbel-3-modal" style="width: 60px; height: 60px" src="img/hi.png" class="on-dobbel">
+                </div>
+              </div>
+          </div>
+          <a id="modal-roll-click" data-role="button" data-theme="a" href="#page2b">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card card">
+              <p id="kaart-tekst-modal">
+                  hebben
+              </p>
+          </div>
+          <a id="modal-new-click" data-role="button" href="#page2b" class="next-button">
+              Nieuw werkwoord
+          </a>
+      </div>
+      <div data-role="tabbar" data-iconpos="top" data-theme="a">
+          <ul>
+              <li>
+                  <a class="tab" href="#page2" data-transition="fade" data-theme="" data-icon="star">
+                      Terug
+                  </a>
+              </li>
+              <li>
+                  <a class="tab" href="#page1" data-transition="fade" data-theme="" data-icon="home">
+                      Menu
+                  </a>
+              </li>
+          </ul>
+      </div>
+  </div>
+
+  <div data-role="page" data-control-title="Met prepositie" id="page2c">
+      <div data-role="panel" id="panel2c" data-position="left" data-display="reveal"
+      data-theme="a">
+          <div class="panel-html" data-controltype="htmlblock">
+            <p class="panel-header">
+              Spelen
+            </p>
+            <p>
+              Elk spel begint met Gooi! en Nieuw werkwoord! 
+              <br>
+              Maak vervolgens een zin met de voorwaarden op de dobbelsteen. 
+            </p>
+            <p class="panel-header">
+              Aan – en uitzetten van de dobbelsteen
+            </p>
+            <p>
+              Wil je niet met alle dobbelstenen spelen? Je kunt alle dobbelstenen aan- of uitzetten. Hoe meer dobbelstenen, hoe uitdagender het wordt om de zin te vormen. 
+            </p>
+            <p class="panel-header">
+              Voorbeeld
+              <br>
+              Dobbelstenen: Jij – PRE – V
+              <br>
+              Werkwoord: gaan
+            </p>
+            <p>
+              Ga jij naar school op zaterdag?
+              <br>
+              Wil je naar een café gaan dit weekend?
+            </p>
+          </div>
+      </div>
+      <div class="header" data-theme="a" data-role="header">
+          <a data-controltype="panelbutton" data-role="button" href="#panel2c" data-icon="bars"
+          data-iconpos="left" class="ui-btn-left">
+              Uitleg
+          </a>
+          <h2>
+              Met prepositie
+          </h2>
+      </div>
+      <div data-role="content">
+          <div class="ui-grid-c dobbel-grid">
+              <div class="ui-block-a dobbel">
+                <div style="" data-controltype="image">
+                    <img id="dobbel-1-prepos" style="width: 60px; height: 59px" src="img/ik.png" class="on-dobbel">
+                </div>
+              </div>
+              <div class="ui-block-b dobbel">
+                <div style="" data-controltype="image">
+                    <img id="dobbel-2-prepos" style="width: 60px; height: 60px" src="img/prf.png" class="on-dobbel">
+                </div>
+              </div>
+              <div class="ui-block-c dobbel">
+                <div style="" data-controltype="image">
+                    <img id="dobbel-3-prepos" style="width: 60px; height: 60px" src="img/hi.png" class="on-dobbel">
+                </div>
+              </div>
+          </div>
+          <a id="prepos-roll-click" data-role="button" data-theme="a" href="#page2c">
+              Gooi!
+          </a>
+          <div data-controltype="htmlblock" class="on-card card">
+              <p id="kaart-tekst-prepos">
+                  hebben
+              </p>
+          </div>
+          <a id="prepos-new-click" data-role="button" href="#page2c" class="next-button">
               Nieuw werkwoord
           </a>
       </div>
