@@ -70,3 +70,14 @@ var feestjeWords = ['het werk', 'drinken', 'de vriend/vriendin', 'wonen', 'de re
 var foodWords = ['koken', 'het ingrediënt', 'de markt', 'de winkel', 'het gerecht', 'lekker', 
             '(niet) houden van', 'snijden', 'bakken', 'de keuken', 'het bestek', 'het bord', 
             'gezellig', 'de tafel', 'het toetje', 'de tafel dekken', 'proeven', 'genieten']
+
+// Organising and turning on/off //
+var dobbels = ['#dobbel-1-start', '#dobbel-2-start', '#dobbel-3-start', 
+			'#dobbel-1-modal', '#dobbel-3-modal', 
+			'#dobbel-1-prepos', '#dobbel-2-prepos', '#dobbel-3-prepos',  
+			'#dobbel-easy-cj', '#dobbel-hard-cj', 
+			'#dobbel-1-indirect', '#dobbel-2-indirect', 
+			'#dobbel-2-wetsch', '#dobbel-3-wetsch',
+			'#dobbel-2-season', '#dobbel-3-season', 
+			'#dobbel-2-party', '#dobbel-3-party', 
+			'#dobbel-2-food', '#dobbel-3-food']

@@ -3,15 +3,14 @@ function selectRandom(data) {
     return data[Math.floor(Math.random()*length)]
 };
 
-function switchDobbel(dobbel) {
-    var dobbelState = $(dobbel).attr('class');
-    if (dobbelState == 'on-dobbel') {
-        $(dobbel).removeClass('on-dobbel').addClass('off-dobbel');
-    }
-    else {
-        $(dobbel).removeClass('off-dobbel').addClass('on-dobbel');
-    }
-};
+// function dobbelCleaner(dobbels) {
+//     $.each(dobbels, function(i) {
+//         $(dobbels[i]).on('click', function(e) {
+//             var dobbelState = $(dobbels[i]).attr('class')
+//             $(dobbels[i]).removeClass(dobbelState).addClass('on-dobbel')
+//         })
+//     });
+// }
 
 $(document).on('pagebeforeshow','#page1' ,function(e, data){
     $(document).on('click', '.card', function(e) {
@@ -22,6 +21,18 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         else {
             $('.card').removeClass('off-card card').addClass('on-card card');
         }
+    });
+
+    $.each(dobbels, function(i) {
+        $(dobbels[i]).on('click', function(e) {
+            var dobbelState = $(dobbels[i]).attr('class')
+            if (dobbelState == 'on-dobbel') {
+                $(dobbels[i]).removeClass('on-dobbel').addClass('off-dobbel');
+            }
+            else {
+                $(dobbels[i]).removeClass('off-dobbel').addClass('on-dobbel');
+            }
+        })
     });
 
     //Dit deel geldt voor het deel Werkwoorden > Start van het menu.
