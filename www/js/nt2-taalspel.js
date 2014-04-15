@@ -12,6 +12,12 @@ function selectRandom(data) {
 //     });
 // }
 
+var entrances = ['#start-click', '#modal-click', '#prepos-click', '#sepa-click', '#inf-click', '#easy-cj-click', '#hard-cj-click', '#relatief-click', '#indirect-click', '#wetsch-click', '#season-click', '#party-click', '#food-click']
+
+function dobbelChecker(dobbel) {
+    return ($(dobbel).attr('class') == 'off-dobbel');
+};
+
 $(document).on('pagebeforeshow','#page1' ,function(e, data){
     $(document).on('click', '.card', function(e) {
         classState = $('.card').attr('class')
@@ -35,9 +41,19 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
         })
     });
 
+    $.each(entrances, function(i) {
+        $(document).on('click', entrances[i],function(e) {
+            $('.card').removeClass($('.card').attr('class')).addClass('on-card card');
+        })
+        $.each(dobbels, function(i) {
+            var dobbelState = $(dobbels[i]).attr('class');
+            alert(dobbelstate)
+            $(dobbels[i]).removeClass(dobbelState).addClass('on-dobbel');
+        })
+    });    
+
     //Dit deel geldt voor het deel Werkwoorden > Start van het menu.
    $(document).on('click', '#start-click',function(e) {
-        $('.card').removeClass($('.card').attr('class')).addClass('on-card card');
         $('#kaart-tekst-start').text(selectRandom(startWords));
         $('#dobbel-1-start').attr('src', selectRandom(pvnImgs));
         $('#dobbel-2-start').attr('src', selectRandom(tijdImgs));
@@ -51,9 +67,15 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#start-roll-click',function(e) {
-        $('#dobbel-1-start').attr('src', selectRandom(pvnImgs));
-        $('#dobbel-2-start').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-start').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-1-start') == false) {
+            $('#dobbel-1-start').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-2-start') == false) {
+            $('#dobbel-2-start').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-start') == false) {
+            $('#dobbel-3-start').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Werkwoorden > Modale werkwoorden van het menu.
@@ -70,8 +92,12 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#modal-roll-click',function(e) {
-        $('#dobbel-1-modal').attr('src', selectRandom(pvnImgs));
-        $('#dobbel-3-modal').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-1-modal') == false) {
+            $('#dobbel-1-modal').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-modal') == false) {
+            $('#dobbel-3-modal').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Werkwoorden > Met prepositie van het menu.
@@ -89,9 +115,15 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#prepos-roll-click',function(e) {
-        $('#dobbel-1-prepos').attr('src', selectRandom(pvnImgs));
-        $('#dobbel-2-prepos').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-prepos').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-1-prepos') == false) {
+            $('#dobbel-1-prepos').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-2-prepos') == false) {
+            $('#dobbel-2-prepos').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-prepos') == false) {
+            $('#dobbel-3-prepos').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Werkwoorden > Separabele werkwoorden.
@@ -145,7 +177,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#easy-cj-roll-click',function(e) {
-        $('#dobbel-easy-cj').attr('src', selectRandom(basisImgs));
+        if (dobbelChecker('#dobbel-easy-cj') == false) {
+            $('#dobbel-easy-cj').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     // Dit deel gaat over het menudeel Conjuncties > Gevorderden.
@@ -162,7 +196,9 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#hard-cj-roll-click',function(e) {
-        $('#dobbel-hard-cj').attr('src', selectRandom(extraImgs));
+        if (dobbelChecker('#dobbel-hard-cj') == false) {
+            $('#dobbel-hard-cj').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Relatief pronomen van het menu.
@@ -195,8 +231,12 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#indirect-roll-click',function(e) {
-        $('#dobbel-1-indirect').attr('src', selectRandom(pvnImgs));
-        $('#dobbel-2-indirect').attr('src', selectRandom(tijdImgs));
+        if (dobbelChecker('#dobbel-1-indirect') == false) {
+            $('#dobbel-1-indirect').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-2-indirect') == false) {
+            $('#dobbel-2-indirect').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Thema's > Wetenschap van het menu.
@@ -210,8 +250,12 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#wetsch-roll-click',function(e) {
-        $('#dobbel-2-wetsch').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-wetsch').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-2-wetsch') == false) {
+            $('#dobbel-2-wetsch').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-wetsch') == false) {
+            $('#dobbel-3-wetsch').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Thema's > Seizoenen van het menu.
@@ -225,8 +269,12 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#season-roll-click',function(e) {
-        $('#dobbel-2-season').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-season').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-2-season') == false) {
+            $('#dobbel-2-season').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-season') == false) {
+            $('#dobbel-3-season').attr('src', selectRandom(pvnImgs));
+        };
     });
  
     //Dit deel geldt voor het deel Thema's > Op een feestje van het menu.
@@ -240,8 +288,12 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#party-roll-click',function(e) {
-        $('#dobbel-2-party').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-party').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-2-party') == false) {
+            $('#dobbel-2-party').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-party') == false) {
+            $('#dobbel-3-party').attr('src', selectRandom(pvnImgs));
+        };
     });
 
     //Dit deel geldt voor het deel Thema's > Eten en drinken van het menu.
@@ -255,7 +307,11 @@ $(document).on('pagebeforeshow','#page1' ,function(e, data){
     });
 
     $(document).on('click', '#food-roll-click',function(e) {
-        $('#dobbel-2-food').attr('src', selectRandom(tijdImgs));
-        $('#dobbel-3-food').attr('src', selectRandom(zinImgs));
+        if (dobbelChecker('#dobbel-2-food') == false) {
+            $('#dobbel-2-food').attr('src', selectRandom(pvnImgs));
+        };
+        if (dobbelChecker('#dobbel-3-food') == false) {
+            $('#dobbel-3-food').attr('src', selectRandom(pvnImgs));
+        };
     });
 });
