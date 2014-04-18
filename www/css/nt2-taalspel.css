@@ -49,6 +49,10 @@
 .off-dobbel {
   opacity: 0.25;
 }
+
+.on-dobbel {
+  opacity: 1;
+}
     
 .dobbel-grid {
     margin-top: 10px;

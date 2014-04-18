@@ -81,3 +81,8 @@ var dobbels = ['#dobbel-1-start', '#dobbel-2-start', '#dobbel-3-start',
 			'#dobbel-2-season', '#dobbel-3-season', 
 			'#dobbel-2-party', '#dobbel-3-party', 
 			'#dobbel-2-food', '#dobbel-3-food']
+
+var entrances = ['#start-click', '#modal-click', '#prepos-click', '#sepa-click', 
+            '#inf-click', '#easy-cj-click', '#hard-cj-click', '#relatief-click', 
+            '#indirect-click', '#wetsch-click', '#season-click', '#party-click', 
+            '#food-click']
