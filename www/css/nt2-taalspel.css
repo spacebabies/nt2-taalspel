@@ -98,3 +98,14 @@
 a {
   text-decoration: none;
 }
+
+img.avatar {
+  width: 107px;
+  float: left;
+  margin: 0 1em 1em 0;
+}
+
+strong,
+b {
+  font-family: century_gothicbold;
+}
